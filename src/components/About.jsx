@@ -17,12 +17,15 @@ export default function About() {
             <p>Hi. I'm Heitor, nice to meet you. Please take a look around.</p>
           </div>
           <div>
-            <p>
-              I am passionate about building excellent software that improves
+            <p>I am passionate about learning and today, I'm trying to positively impact people's lives. </p>
+            <p>I have a master's degree in electrical engineering and work as a technical writer nowadays. I just finished the front-end module, and I'm currently starting the front-end module of the full-stack web developer course at Trybe.
+            <p>Previously, I worked for 04 years as a researcher at two federal universities and 02 years as a college professor in Brazil. Furthermore, I was also a member of AIESEC during an exchange program at Arizona State University.</p>
+
+              {/* I am passionate about building excellent software that improves
               the lives of those around me. I specialize in creating software
               for clients ranging from individuals and small-businesses all the
               way to large enterprise corporations. What would you do if you had
-              a software expert available at your fingertips?
+              a software expert available at your fingertips? */}
             </p>
           </div>
         </div>
