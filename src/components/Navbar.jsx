@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa';
 import {HiOutlineMail} from 'react-icons/hi';
 import {BsFillPersonLinesFill} from 'react-icons/bs';
-import Logo from '../assets/logo.png';
+// import Logo from '../assets/logo.png';
 import {Link} from 'react-scroll';
 
 export default function Navbar() {
@@ -88,7 +88,7 @@ export default function Navbar() {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600">
             <a
               className="flex justify-between items-center w-full text-gray-300"
-              href="/"
+              href="https://www.linkedin.com/in/heitortessaro/"
             >
               Linkedin <FaLinkedin size={30} />
             </a>
@@ -96,7 +96,7 @@ export default function Navbar() {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]">
             <a
               className="flex justify-between items-center w-full text-gray-300"
-              href="/"
+              href="https://github.com/heitortessaro"
             >
               Github <FaGithub size={30} />
             </a>
@@ -104,7 +104,7 @@ export default function Navbar() {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]">
             <a
               className="flex justify-between items-center w-full text-gray-300"
-              href="/"
+              href="mailto:heitor.j.tessaro@gmail.com"
             >
               Email <HiOutlineMail size={30} />
             </a>
