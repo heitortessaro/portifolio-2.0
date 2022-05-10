@@ -11,12 +11,13 @@ export default function Navbar() {
     setNav(!nav);
   };
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4  text-gray-300">
-      <div>
-        <img src={Logo} alt="LogoImage" style={{width: '50px'}} />
+    <div className="fixed w-full h-[80px] flex justify-between items-center mx-auto px-8 text-gray-300">
+      <div className='text-xl font-bold '>
+        {/* <img src={Logo} alt="LogoImage" style={{width: '50px'}} /> */}
+        Heitor.JT
       </div>
       {/* menu */}
-      <ul className="hidden md:flex">
+      <ul className="hidden md:flex space-x-6 items-center">
         <li>
           <Link to="home" smooth={true}  duration={500}>
             Home
@@ -39,7 +40,7 @@ export default function Navbar() {
         </li>
         <li>
           <Link to="contact" smooth={true}  duration={500}>
-            Contact
+            <button className='px-6 py-2 bg-theme font-semibold'> Hire me </button>
           </Link>
         </li>
       </ul>
