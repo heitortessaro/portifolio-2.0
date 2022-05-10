@@ -11,7 +11,7 @@ export default function Navbar() {
     setNav(!nav);
   };
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center mx-auto px-8 text-gray-300">
+    <div className="fixed w-full h-[80px] flex justify-between items-center mx-auto px-10 text-gray-300">
       <div className='text-xl font-bold '>
         {/* <img src={Logo} alt="LogoImage" style={{width: '50px'}} /> */}
         Heitor.JT
@@ -40,7 +40,7 @@ export default function Navbar() {
         </li>
         <li>
           <Link to="contact" smooth={true}  duration={500}>
-            <button className='px-6 py-2 bg-theme font-semibold'> Hire me </button>
+            <button className='px-6 py-2 bg-theme font-semibold hover:rounded-xl duration-300'> Hire me </button>
           </Link>
         </li>
       </ul>
@@ -53,7 +53,7 @@ export default function Navbar() {
         className={
           !nav
             ? 'hidden'
-            : 'absolute top-0 left-0 w-full h-screen  flex flex-col justify-center items-center'
+            : 'absolute top-0 left-0 w-full h-screen bg-main-body flex flex-col justify-center items-center'
         }
       >
         <li className="py-6 text-4xl">
@@ -78,7 +78,7 @@ export default function Navbar() {
         </li>
         <li className="py-6 text-4xl">
           <Link onClick={handleClick}  to="contact" smooth={true}  duration={500}>
-            Contact
+            Hire me
           </Link>
         </li>
       </ul>
@@ -101,7 +101,7 @@ export default function Navbar() {
               Github <FaGithub size={30} />
             </a>
           </li>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]">
+          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#28c4a2]">
             <a
               className="flex justify-between items-center w-full text-gray-300"
               href="mailto:heitor.j.tessaro@gmail.com"
