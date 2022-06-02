@@ -1,6 +1,7 @@
 import React from 'react';
 import skills from '../services/skills'
 import SkillCard from './skills/SkillCard';
+import SkillCardCarousel from './skills/SkillCardCarousel';
 
 export default function CarouselSkills() {
   return (
@@ -16,12 +17,12 @@ export default function CarouselSkills() {
           {skills.map((e, i, a) => {
             return (
               !((i + 1) % 4) && (
-                <div className="carousel-item w-full">
+                <div className="carousel-item w-full" key={e.skill + i}>
                   <div className="w-full grid grid-cols-2 gap-4 text-center py-8">
-                    <SkillCard skill={a[i - 3].skill} img={a[i - 3].img} key={a[i - 3].skill + i} />
-                    <SkillCard skill={a[i - 2].skill} img={a[i - 2].img} key={a[i - 2].skill + i} />
-                    <SkillCard skill={a[i - 1].skill} img={a[i - 1].img} key={a[i - 1].skill + i} />
-                    <SkillCard skill={e.skill} img={e.img} key={e.skill + i} />
+                    <SkillCardCarousel skill={a[i - 3].skill} img={a[i - 3].img}  />
+                    <SkillCardCarousel skill={a[i - 2].skill} img={a[i - 2].img}  />
+                    <SkillCardCarousel skill={a[i - 1].skill} img={a[i - 1].img}  />
+                    <SkillCardCarousel skill={e.skill} img={e.img}  />
                   </div>
                 </div>
               )
