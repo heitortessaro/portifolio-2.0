@@ -12,9 +12,9 @@ const Work = () => {
           </p>
           <p className="py-6">Check out some of my recent work (to be completed)</p>
         </div>
-        <div class="carousel carousel-center w-full sm:hidden ">
-          <div class="carousel-item w-full">
-            <div class="w-full  gap-4 py-8">
+        <div className="carousel carousel-center w-full sm:hidden ">
+          <div className="carousel-item w-full">
+            <div className="w-full  gap-4 py-8">
               <div
                 style={{ backgroundImage: `url(${WorkImg})` }}
                 className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
@@ -40,8 +40,8 @@ const Work = () => {
               </div>
             </div>
           </div>
-          <div class="carousel-item w-full">
-            <div class="w-full gap-4 py-8">
+          <div className="carousel-item w-full">
+            <div className="w-full gap-4 py-8">
               <div
                 style={{ backgroundImage: `url(${WorkImg})` }}
                 className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
