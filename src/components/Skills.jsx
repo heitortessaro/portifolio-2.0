@@ -13,7 +13,7 @@ import Tailwind from '../assets/tailwind.png';
 
 export default function Skills() {
   return (
-    <div name='skills' className='w-full h-screen text-gray-300 mt-8'>
+    <div name='skills' className='w-full h-screen text-gray-300'>
       {/* Container */}
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
           <div>

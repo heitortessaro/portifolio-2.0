@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Skills from "./components/Skills";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
+import CarouselSkills from "./components/CarouselSkills";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <Navbar />
       <Home />
       <About />
-      <Skills />
+      <CarouselSkills />
       <Work />
       <Contact />
     </div>
