@@ -17,7 +17,7 @@ export default function CarouselSkills() {
           {skills.map((e, i, a) => {
             return (
               !((i + 1) % 4) && (
-                <div className="carousel-item w-full" key={e.skill + i}>
+                <div className="carousel-item w-full" key={e.skill + i + 'carousel'}>
                   <div className="w-full grid grid-cols-2 gap-4 text-center py-8">
                     <SkillCardCarousel skill={a[i - 3].skill} img={a[i - 3].img}  />
                     <SkillCardCarousel skill={a[i - 2].skill} img={a[i - 2].img}  />
