@@ -13,7 +13,7 @@ const skills = [
   },
   {
     skill:'REACT',
-    img:'https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg',
+    img:'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg',
   },
   {
     skill:'REDUX',
