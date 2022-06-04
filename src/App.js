@@ -1,9 +1,10 @@
 import Home from "./components/Home";
 import About from "./components/About";
 import Navbar from "./components/Navbar";
-import Skills from "./components/Skills";
+// import Skills from "./components/Skills";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
+import CarouselSkills from "./components/CarouselSkills";
 
 function App() {
   return (
@@ -11,8 +12,8 @@ function App() {
       <Navbar />
       <Home />
       <About />
-      <Skills />
-      <Work />
+      <CarouselSkills />
+      <Work /> 
       <Contact />
     </div>
   );

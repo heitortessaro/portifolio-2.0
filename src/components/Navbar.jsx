@@ -11,7 +11,7 @@ export default function Navbar() {
     setNav(!nav);
   };
   return (
-    <nav className="fixed w-full h-[80px] flex justify-between items-center mx-auto px-10 lg:px-32 bg-main-body text-gray-300">
+    <nav className="fixed w-full h-[80px] flex justify-between items-center mx-auto px-10 lg:px-32 bg-main-body text-gray-300 z-20">
       <div className='text-xl font-bold '>
         {/* <img src={Logo} alt="LogoImage" style={{width: '50px'}} /> */}
         Heitor.JT
