@@ -3,7 +3,7 @@ import React from "react";
 export default function ProjectCard({ project, img, demo, code, description }) {
   return (
     <div
-      style={{ backgroundImage: `url(${img})` }}
+      style={{ backgroundImage: `url('../images/${img}')` }}
       className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
     >
       {/* Hover Effects */}
