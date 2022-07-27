@@ -1,17 +1,22 @@
 import React from "react";
+import * as images from '../../images/index';
 
-export default function ProjectCard({ project, img, demo, code, description }) {
+export default function ProjectCard({ project, img, demo, code, description, type }) {
+  const image = images[img];
   return (
     <div
-      style={{ backgroundImage: `url('../images/${img}')` }}
+      style={{ backgroundImage: `url('${image}')` }}
       className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
     >
       {/* Hover Effects */}
-      <div className="opacity-0 group-hover:opacity-100 px-2 mx-auto">
+      <div className="opacity-0 group-hover:opacity-100 px-4 mx-auto">
         <span className="text-2xl font-bold text-white tracking-wider">
           {project}
         </span>
         <br/>
+        <span className="text font-bold text-white tracking-wider">
+          {`${type}: `}
+        </span>
         <span className="text-white text-sm w-5/6">
           {description}
         </span>

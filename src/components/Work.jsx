@@ -11,7 +11,7 @@ const Work = () => {
           <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600">
             Work
           </p>
-          <p className="py-6">Check out some of my recent work (to be completed)</p>
+          <p className="py-6">Check out some of my recent work</p>
         </div>
 
         {/* Carousel */}
@@ -29,7 +29,14 @@ const Work = () => {
         <div className="hidden sm:grid sm:grid-cols-2 md:grid-cols-3 gap-4">
           {/* Grid Item */}
           {projects.map((e, i) => (
-            <ProjectCard description={e.description} project={e.project} img={e.img} demo={e.demo} code={e.code} key={e.project + i*100} />
+            <ProjectCard 
+              description={e.description} 
+              type={e.type}
+              project={e.project} 
+              img={e.img} 
+              demo={e.demo} 
+              code={e.code} 
+              key={e.project + i*100} />
           ))}
         </div>
       </div>
