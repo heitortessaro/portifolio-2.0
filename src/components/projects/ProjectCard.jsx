@@ -1,7 +1,7 @@
 import React from "react";
 import * as images from '../../images/index';
 
-export default function ProjectCard({ project, img, demo, code, description, type }) {
+export default function ProjectCard({ project, img, secBtnType, secLink, code, description, type }) {
   const image = images[img];
   return (
     <div
@@ -21,9 +21,9 @@ export default function ProjectCard({ project, img, demo, code, description, typ
           {description}
         </span>
         <div className="pt-8 text-center">
-          <a href={demo}>
+          <a href={secLink}>
             <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-              Demo
+              {secBtnType}
             </button>
           </a>
           <a href={code}>

@@ -34,7 +34,8 @@ const Work = () => {
               type={e.type}
               project={e.project} 
               img={e.img} 
-              demo={e.demo} 
+              secBtnType={e.secBtnType}
+              secLink={e.secLink} 
               code={e.code} 
               key={e.project + i*100} />
           ))}
