@@ -1,3 +1,4 @@
-export const trivia = require('./trivia.png')
-export const wallet = require('./wallet.png')
-
+export const trivia = require('./trivia.png');
+export const wallet = require('./wallet.png');
+export const store = require('./store.jpg');
+export const blogs = require('./blogs.jpg')
