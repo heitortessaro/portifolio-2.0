@@ -1,9 +1,10 @@
 import { useState, useRef, useEffect } from 'react';
-import skills from '../services/skills'
+import projects from '../services/projects'
+import ProjectCard from './projects/ProjectCard';
 // import SkillCard from './skills/SkillCard';
-import SkillCardCarousel from './skills/SkillCardCarousel';
+import ProjectCardCarousel2 from './projects/ProjectCardCarousel2';
 
-const CarouselSkills = () => {
+const CarouselProjects = () => {
   const maxScrollWidth = useRef(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const carousel = useRef(null);
@@ -45,7 +46,7 @@ const CarouselSkills = () => {
 
   useEffect(() => {
     maxScrollWidth.current = carousel.current
-      ? carousel.current.scrollWidth - carousel.current.offsetWidth 
+      ? carousel.current.scrollWidth - carousel.current.offsetWidth
       : 0;
   }, []);
 
@@ -100,24 +101,21 @@ const CarouselSkills = () => {
           ref={carousel}
           className="carousel-container relative flex gap-1 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0"
         >
-          {skills.map((skill, index, array) => {
-            return (
-              !((index + 1) % 4) && (
-                <div className="carousel-item w-full" key={skill.skill + index + 'carousel'}>
-                  <div className="w-full grid grid-cols-2 gap-4 text-center py-8">
-                    <SkillCardCarousel skill={array[index - 3].skill} img={array[index - 3].img}  />
-                    <SkillCardCarousel skill={array[index - 2].skill} img={array[index - 2].img}  />
-                    <SkillCardCarousel skill={array[index - 1].skill} img={array[index - 1].img}  />
-                    <SkillCardCarousel skill={skill.skill} img={skill.img}  />
-                  </div>
-                </div>
-              )
-            );
-          })}
+          {projects.map((e, i) => (
+            <ProjectCardCarousel2 
+              description={e.description} 
+              type={e.type}
+              project={e.project} 
+              img={e.img} 
+              secBtnType={e.secBtnType}
+              secLink={e.secLink} 
+              code={e.code} 
+              key={e.project + i*100 + "carousel"} />
+          ))}
         </div>
       </div>
     </div>
   );
 };
 
-export default CarouselSkills;
+export default CarouselProjects;

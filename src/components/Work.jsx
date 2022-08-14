@@ -1,5 +1,6 @@
 import React from 'react';
 import projects from '../services/projects';
+import CarouselProjects from './CarouselProjects';
 import ProjectCard from './projects/ProjectCard';
 import ProjectCardCarousel from './projects/ProjectCardsCarousel';
 
@@ -11,17 +12,18 @@ const Work = () => {
           <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600">
             Work
           </p>
-          <p className="py-6">Check out some of my recent work (to be completed)</p>
+          <p className="py-6">Check out some of my recent work</p>
         </div>
 
         {/* Carousel */}
-        <div className="carousel carousel-center w-full sm:hidden ">
+        <CarouselProjects />
+        {/* <div className="carousel carousel-center w-full sm:hidden ">
           {projects.map((e) => (
             <div className="carousel-item w-full px-2 " key={e.project + "carousel"}>
                 <ProjectCardCarousel description={e.description} project={e.project} img={e.img} demo={e.demo} code={e.code} />
             </div>
           ))}
-        </div>
+        </div> */}
 
 
         {/* ------------------------------------------------------- */}
@@ -29,7 +31,15 @@ const Work = () => {
         <div className="hidden sm:grid sm:grid-cols-2 md:grid-cols-3 gap-4">
           {/* Grid Item */}
           {projects.map((e, i) => (
-            <ProjectCard description={e.description} project={e.project} img={e.img} demo={e.demo} code={e.code} key={e.project + i*100} />
+            <ProjectCard 
+              description={e.description} 
+              type={e.type}
+              project={e.project} 
+              img={e.img} 
+              secBtnType={e.secBtnType}
+              secLink={e.secLink} 
+              code={e.code} 
+              key={e.project + i*100} />
           ))}
         </div>
       </div>

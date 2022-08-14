@@ -1,6 +1,7 @@
 import React from 'react';
 // import {HiArrowNarrowRight} from 'react-icons/hi';
-import {FaEye} from 'react-icons/fa';
+import {Link} from 'react-scroll';
+import { FaEye } from 'react-icons/fa';
 
 export default function Home() {
   return (
@@ -12,14 +13,15 @@ export default function Home() {
         <p className="text-[#8892b0]">I'm a Full Stack Developer.</p>
         <h1 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6]">
           Let's Build Great Experiences Together!
-        </h1>        
+        </h1>
         {/* <p className="text-[#8892b0] py-4 max-w-[700px]">
           Description
         </p> */}
         <div>
           <button className="text-white group border-2 px-6 py-3 my-12 flex items-center hover:bg-pink-600 hover:border-pink-600">
-            View my work!
-            {/* <span className="group-hover:rotate-90 duration-300"> */}
+            <Link to="work" smooth={true} duration={500}>
+              View my work!
+            </Link>
             <span>
               <FaEye className="ml-3" />
             </span>

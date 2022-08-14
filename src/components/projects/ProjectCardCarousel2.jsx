@@ -1,15 +1,13 @@
 import React from "react";
 import * as images from '../../images/index';
 
-export default function ProjectCard({ project, img, secBtnType, secLink, code, description, type }) {
+export default function ProjectCardCarousel2({ project, img, secBtnType, secLink, code, description, type }) {
   const image = images[img];
   return (
     <div
-      style={{ backgroundImage: `url('${image}')` }}
-      className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
+      className="w-96 rounded-md flex justify-center items-center mx-auto content-div bg-sky-900"
     >
-      {/* Hover Effects */}
-      <div className="opacity-0 group-hover:opacity-100 px-4 mx-auto">
+      <div className="px-4 mx-auto">
         <span className="text-2xl font-bold text-white tracking-wider">
           {project}
         </span>
