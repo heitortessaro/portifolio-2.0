@@ -18,6 +18,15 @@ const projects = [
     type: "Front-End",
   },
   {
+    project:'Planet Search',
+    img:'star_wars',
+    description: 'Provides filter list to find the Star Wars planets. It uses React, Context API, Hooks, and Bootstrap.',
+    secBtnType: 'Demo',
+    secLink: 'https://starwars-planets-search-rosy.vercel.app/',
+    code: 'https://github.com/heitortessaro/starwars-planets-search',
+    type: "Front-End",
+  },
+  {
     project:'Store Manager',
     img:'store',
     description: 'It is a Rest API that provides a sales management system in the dropshipping format.',

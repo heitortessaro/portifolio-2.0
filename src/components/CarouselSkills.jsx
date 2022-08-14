@@ -1,41 +1,123 @@
-import React from 'react';
+import { useState, useRef, useEffect } from 'react';
 import skills from '../services/skills'
-import SkillCard from './skills/SkillCard';
+// import SkillCard from './skills/SkillCard';
 import SkillCardCarousel from './skills/SkillCardCarousel';
 
-export default function CarouselSkills() {
-  return (
-    <div name='skills' className='w-full h-screen text-gray-300'>
-      {/* Container */}
-      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
-        <div>
-          <p className='text-4xl font-bold inline border-b-4 border-pink-600 '>Skills</p>
-          <p className='py-4'>These are the technologies I've worked with recently</p>
-        </div>
+const CarouselSkills = () => {
+  const maxScrollWidth = useRef(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const carousel = useRef(null);
 
-        <div className="carousel carousel-center w-full sm:hidden ">
-          {skills.map((e, i, a) => {
+  const movePrev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex((prevState) => prevState - 1);
+    }
+  };
+
+  const moveNext = () => {
+    if (
+      carousel.current !== null &&
+      carousel.current.offsetWidth * currentIndex <= maxScrollWidth.current
+    ) {
+      setCurrentIndex((prevState) => prevState + 1);
+    }
+  };
+
+  const isDisabled = (direction) => {
+    if (direction === 'prev') {
+      return currentIndex <= 0;
+    }
+
+    if (direction === 'next' && carousel.current !== null) {
+      return (
+        carousel.current.offsetWidth * currentIndex >= maxScrollWidth.current
+      );
+    }
+
+    return false;
+  };
+
+  useEffect(() => {
+    if (carousel !== null && carousel.current !== null) {
+      carousel.current.scrollLeft = carousel.current.offsetWidth * currentIndex;
+    }
+  }, [currentIndex]);
+
+  useEffect(() => {
+    maxScrollWidth.current = carousel.current
+      ? carousel.current.scrollWidth - carousel.current.offsetWidth 
+      : 0;
+  }, []);
+
+  return (
+    <div className="carousel my-2 mx-auto sm:hidden">
+      <div className="relative overflow-hidden">
+        <div className="flex justify-between absolute top left w-full h-full">
+          <button
+            onClick={movePrev}
+            className="hover:bg-blue-900/75 text-white w-10 h-full text-center opacity-75 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
+            disabled={isDisabled('prev')}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-12 w-20 -ml-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+            <span className="sr-only">Prev</span>
+          </button>
+          <button
+            onClick={moveNext}
+            className="hover:bg-blue-900/75 text-white w-10 h-full text-center opacity-75 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
+            disabled={isDisabled('next')}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-12 w-20 -ml-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+            <span className="sr-only">Next</span>
+          </button>
+        </div>
+        <div
+          ref={carousel}
+          className="carousel-container relative flex gap-1 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0"
+        >
+          {skills.map((skill, index, array) => {
             return (
-              !((i + 1) % 4) && (
-                <div className="carousel-item w-full" key={e.skill + i + 'carousel'}>
+              !((index + 1) % 4) && (
+                <div className="carousel-item w-full" key={skill.skill + index + 'carousel'}>
                   <div className="w-full grid grid-cols-2 gap-4 text-center py-8">
-                    <SkillCardCarousel skill={a[i - 3].skill} img={a[i - 3].img}  />
-                    <SkillCardCarousel skill={a[i - 2].skill} img={a[i - 2].img}  />
-                    <SkillCardCarousel skill={a[i - 1].skill} img={a[i - 1].img}  />
-                    <SkillCardCarousel skill={e.skill} img={e.img}  />
+                    <SkillCardCarousel skill={array[index - 3].skill} img={array[index - 3].img}  />
+                    <SkillCardCarousel skill={array[index - 2].skill} img={array[index - 2].img}  />
+                    <SkillCardCarousel skill={array[index - 1].skill} img={array[index - 1].img}  />
+                    <SkillCardCarousel skill={skill.skill} img={skill.img}  />
                   </div>
                 </div>
               )
-            )
+            );
           })}
-        </div>
-
-        <div className='hidden w-full sm:grid sm:grid-cols-3 md:grid-cols-6 gap-4 text-center py-8'>
-          {skills.map((e, i) => (
-            <SkillCard skill={e.skill} img={e.img} key={e.skill + i} />
-          ))}
         </div>
       </div>
     </div>
   );
 };
+
+export default CarouselSkills;

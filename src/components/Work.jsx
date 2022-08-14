@@ -1,5 +1,6 @@
 import React from 'react';
 import projects from '../services/projects';
+import CarouselProjects from './CarouselProjects';
 import ProjectCard from './projects/ProjectCard';
 import ProjectCardCarousel from './projects/ProjectCardsCarousel';
 
@@ -15,13 +16,14 @@ const Work = () => {
         </div>
 
         {/* Carousel */}
-        <div className="carousel carousel-center w-full sm:hidden ">
+        <CarouselProjects />
+        {/* <div className="carousel carousel-center w-full sm:hidden ">
           {projects.map((e) => (
             <div className="carousel-item w-full px-2 " key={e.project + "carousel"}>
                 <ProjectCardCarousel description={e.description} project={e.project} img={e.img} demo={e.demo} code={e.code} />
             </div>
           ))}
-        </div>
+        </div> */}
 
 
         {/* ------------------------------------------------------- */}
