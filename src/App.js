@@ -9,7 +9,7 @@ import {Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="bg-main-body">
+    <div >
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
