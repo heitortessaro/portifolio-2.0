@@ -52,7 +52,7 @@ const Work = () => {
               description={e.description} 
               type={e.type}
               project={e.project} 
-              img={e.img} 
+              img={e.img.split('.')[0]} 
               secBtnType={e.secBtnType}
               secLink={e.secLink} 
               code={e.code} 

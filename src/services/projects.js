@@ -19,7 +19,7 @@ const projects = [
   },
   {
     project:'Planet Search',
-    img:'star-wars.png',
+    img:'starwars.png',
     description: 'Provides filter list to find the Star Wars planets. It uses React, Context API, Hooks, and Bootstrap.',
     secBtnType: 'Demo',
     secLink: 'https://starwars-planets-search-rosy.vercel.app/',
