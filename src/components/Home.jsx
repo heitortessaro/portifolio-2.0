@@ -1,6 +1,6 @@
 import React from 'react';
 // import {HiArrowNarrowRight} from 'react-icons/hi';
-import {Link} from 'react-scroll';
+// import {Link} from 'react-scroll';
 import { FaEye } from 'react-icons/fa';
 
 export default function Home() {
@@ -19,9 +19,7 @@ export default function Home() {
         </p> */}
         <div>
           <button className="text-white group border-2 px-6 py-3 my-12 flex items-center hover:bg-pink-600 hover:border-pink-600">
-            <Link to="work" smooth={true} duration={500}>
-              View my work!
-            </Link>
+            <a href="/work">View my work!</a>
             <span>
               <FaEye className="ml-3" />
             </span>
