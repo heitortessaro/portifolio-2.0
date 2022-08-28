@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
-// import {BsFillPersonLinesFill} from 'react-icons/bs';
-// import Logo from '../assets/logo.png';
-// import { Link } from 'react-scroll';
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
@@ -13,7 +10,6 @@ export default function Navbar() {
   return (
     <nav className="fixed w-full h-[80px] flex justify-between items-center mx-auto px-10 lg:px-32 bg-main-body text-gray-300 z-20">
       <div className='text-3xl font-bold '>
-        {/* <img src={Logo} alt="LogoImage" style={{width: '50px'}} /> */}
         Heitor.JT
       </div>
       {/* menu */}
