@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
-import {FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa';
-import {HiOutlineMail} from 'react-icons/hi';
+import React, { useState } from 'react';
+import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
 // import {BsFillPersonLinesFill} from 'react-icons/bs';
 // import Logo from '../assets/logo.png';
-import {Link} from 'react-scroll';
+// import { Link } from 'react-scroll';
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
@@ -19,29 +19,21 @@ export default function Navbar() {
       {/* menu */}
       <ul className="hidden md:flex space-x-6 items-center">
         <li>
-          <Link to="home" smooth={true}  duration={500}>
-            Home
-          </Link>
+          <a href="/">Home</a>
         </li>
         <li>
-          <Link to="about" smooth={true}  duration={500}>
-            About
-          </Link>
+        <a href="/about">About</a>
         </li>
         <li>
-          <Link to="skills" smooth={true}  duration={500}>
-              Skills
-          </Link>
+          <a href="/skills">Skills</a>
         </li>
         <li>
-          <Link to="work" smooth={true}  duration={500}>
-            Work
-          </Link>
+          <a href="/work">Work</a>
         </li>
         <li>
-          <Link to="contact" smooth={true}  duration={500}>
+          <a href="/contact">
             <button className='px-6 py-2 bg-theme font-semibold hover:rounded-xl duration-300'> Hire me </button>
-          </Link>
+          </a>
         </li>
       </ul>
       {/* Hamburger */}
@@ -57,29 +49,19 @@ export default function Navbar() {
         }
       >
         <li className="py-6 text-4xl">
-          <Link onClick={handleClick} to="home" smooth={true}  duration={500}>
-            Home
-          </Link>
+          <a href="/">Home</a>
         </li>
         <li className="py-6 text-4xl">
-          <Link onClick={handleClick} to="about" smooth={true}  duration={500}>
-            About
-          </Link>          
+        <a href="/about">About</a>
         </li>
         <li className="py-6 text-4xl">
-          <Link onClick={handleClick} to="skills" smooth={true}  duration={500}>
-              Skills
-          </Link>
+        <a href="/skills">Skills</a>
         </li>
         <li className="py-6 text-4xl">
-          <Link onClick={handleClick}  to="work" smooth={true}  duration={500}>
-            Work
-          </Link>
+        <a href="/work">Work</a>
         </li>
         <li className="py-6 text-4xl">
-          <Link onClick={handleClick}  to="contact" smooth={true}  duration={500}>
-            Hire me
-          </Link>
+        <a href="/contact">Hire me</a>
         </li>
       </ul>
       {/* Social icons */}
@@ -109,14 +91,6 @@ export default function Navbar() {
               Email <HiOutlineMail size={30} />
             </a>
           </li>
-          {/* <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]">
-            <a
-              className="flex justify-between items-center w-full text-gray-300"
-              href="/"
-            >
-              Resume <BsFillPersonLinesFill size={30} />
-            </a>
-          </li> */}
         </ul>
       </div>
     </nav>
