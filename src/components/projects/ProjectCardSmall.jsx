@@ -1,27 +1,26 @@
 import React from "react";
-import * as images from '../../images/index';
 
-export default function ProjectCard({ project, img, secBtnType, secLink, code, description, type }) {
-  const image = images[img];
-  console.log(img)
+export default function ProjectCardSmall({ project, img, secBtnType, secLink, code, description, type }) {
+  console.log(img);
   return (
     <div
-      style={{ backgroundImage: `url('${image}')` }}
-      className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
+      className="shadow-lg shadow-[rgb(0,0,0)] rounded-md mb-6 w-5/6 mx-auto"
     >
-      {/* Hover Effects */}
-      <div className="opacity-0 group-hover:opacity-100 px-4 mx-auto">
+      <div>
+        <img className="rounded-t-lg" src={`../../images/${img}`} alt={project}/>
+      </div>
+      <div className="mx-auto p-4">
         <span className="text-2xl font-bold text-white tracking-wider">
           {project}
         </span>
-        <br/>
+        <br />
         <span className="text font-bold text-white tracking-wider">
           {`${type}: `}
         </span>
         <span className="text-white text-sm w-5/6">
           {description}
         </span>
-        <div className="pt-8 text-center">
+        <div className="pt-4 text-center">
           <a href={secLink}>
             <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
               {secBtnType}
@@ -34,6 +33,6 @@ export default function ProjectCard({ project, img, secBtnType, secLink, code, d
           </a>
         </div>
       </div>
-    </div>
+    </div >
   )
 }

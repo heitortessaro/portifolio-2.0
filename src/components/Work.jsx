@@ -1,14 +1,15 @@
 import React from 'react';
 import projects from '../services/projects';
-import CarouselProjects from './CarouselProjects';
+// import CarouselProjects from './CarouselProjects';
 import ProjectCard from './projects/ProjectCard';
-import ProjectCardCarousel from './projects/ProjectCardsCarousel';
+import ProjectCardSmall from './projects/ProjectCardSmall';
+// import ProjectCardCarousel from './projects/ProjectCardsCarousel';
 
 const Work = () => {
   return (
-    <div name="work" className="w-full md:h-screen text-gray-300  mt-8">
+    <div name="work" className="w-full md:h-screen text-gray-300">
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-        <div className="pb-2 sm:pb-8">
+        <div className="mt-20 md:mt-0 pb-2 sm:pb-8">
           <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600">
             Work
           </p>
@@ -16,7 +17,7 @@ const Work = () => {
         </div>
 
         {/* Carousel */}
-        <CarouselProjects />
+        {/* <CarouselProjects /> */}
         {/* <div className="carousel carousel-center w-full sm:hidden ">
           {projects.map((e) => (
             <div className="carousel-item w-full px-2 " key={e.project + "carousel"}>
@@ -25,6 +26,22 @@ const Work = () => {
           ))}
         </div> */}
 
+        {/* ------------------------------------------------------- */}
+        {/* Container small screns*/}
+        <div className="sm:hidden ">
+          {/* Grid Item */}
+          {projects.map((e, i) => (
+            <ProjectCardSmall 
+              description={e.description} 
+              type={e.type}
+              project={e.project} 
+              img={e.img} 
+              secBtnType={e.secBtnType}
+              secLink={e.secLink} 
+              code={e.code} 
+              key={e.project + i*100} />
+          ))}
+        </div>
 
         {/* ------------------------------------------------------- */}
         {/* Container */}
@@ -35,7 +52,7 @@ const Work = () => {
               description={e.description} 
               type={e.type}
               project={e.project} 
-              img={e.img} 
+              img={e.img.split('.')[0]} 
               secBtnType={e.secBtnType}
               secLink={e.secLink} 
               code={e.code} 
