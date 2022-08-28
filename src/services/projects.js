@@ -1,7 +1,7 @@
 const projects = [
   {
     project:'Trivia Game',
-    img:'trivia',
+    img:'trivia.png',
     description: 'Online version of the popular game Trivia. It uses Redux, Hooks, Tailwind, DaisyUI, the Open Trivia Database.',
     secBtnType: 'Demo',
     secLink: 'https://trivia-game-p8t5vpu0f-heitortessaro.vercel.app/',
@@ -10,7 +10,7 @@ const projects = [
   },
   {
     project:'Trybe Wallet',
-    img:'wallet',
+    img:'wallet.png',
     description: 'Provides a currency converter spending control wallet. It uses React, Redux, and Bootstrap.',
     secBtnType: 'Demo',
     secLink: 'https://trybewallet-ioqsphljg-heitortessaro.vercel.app/',
@@ -19,7 +19,7 @@ const projects = [
   },
   {
     project:'Planet Search',
-    img:'star_wars',
+    img:'star-wars.png',
     description: 'Provides filter list to find the Star Wars planets. It uses React, Context API, Hooks, and Bootstrap.',
     secBtnType: 'Demo',
     secLink: 'https://starwars-planets-search-rosy.vercel.app/',
@@ -28,7 +28,7 @@ const projects = [
   },
   {
     project:'Store Manager',
-    img:'store',
+    img:'store.jpg',
     description: 'It is a Rest API that provides a sales management system in the dropshipping format.',
     secBtnType: 'Docs Postman',
     secLink: 'https://documenter.getpostman.com/view/21397186/UzJJtx5k',
@@ -37,7 +37,7 @@ const projects = [
   }, 
   {
     project:'Blogs API',
-    img:'blogs',
+    img:'blogs.jpg',
     description: 'It is a Rest API that enables the management of users and posts for a blog application.',
     secBtnType: 'Docs Postman',
     secLink: 'https://documenter.getpostman.com/view/21397186/UzQyqP5N',
