@@ -52,20 +52,28 @@ const skills = [
     img:'https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg',
   },
   {
-    skill:'GITHUB',
-    img:'https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg',
-  },
-  {
-    skill:'DOCKER',
-    img:'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg',
-  },
-  {
     skill:'MYSQL',
     img:'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg',
   },
   {
     skill:'MONGODB',
     img:'https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg',
+  },
+  {
+    skill:'SEQUELIZE',
+    img:'https://raw.githubusercontent.com/devicons/devicon/master/icons/sequelize/sequelize-original.svg',
+  },
+  {
+    skill:'EXPRESS',
+    img:'https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg',
+  },
+  {
+    skill:'GITHUB',
+    img:'https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg',
+  },
+  {
+    skill:'DOCKER',
+    img:'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg',
   },
   {
     skill:'SLACK',
