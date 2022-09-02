@@ -16,6 +16,10 @@ const skills = [
     img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
   },
   {
+    skill:'PYTHON',
+    img:'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg',
+  },
+  {
     skill:'REACT',
     img:'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg',
   },
@@ -50,10 +54,6 @@ const skills = [
   {
     skill:'GITHUB',
     img:'https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg',
-  },
-  {
-    skill:'PYTHON',
-    img:'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg',
   },
   {
     skill:'DOCKER',
