@@ -12,6 +12,10 @@ const skills = [
     img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
   },
   {
+    skill:'TYPESCRIPT',
+    img:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+  },
+  {
     skill:'REACT',
     img:'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg',
   },
@@ -22,6 +26,18 @@ const skills = [
   {
     skill:'JEST',
     img:'https://raw.githubusercontent.com/devicons/devicon/master/icons/jest/jest-plain.svg',
+  },
+  {
+    skill:'MOCHA',
+    img:'https://raw.githubusercontent.com/devicons/devicon/master/icons/mocha/mocha-plain.svg',
+  },
+  {
+    skill:'CHAI',
+    img:'https://cdn.icon-icons.com/icons2/2699/PNG/512/chaijs_logo_icon_168435.png',
+  },
+  {
+    skill:'SINON',
+    img:'https://sinonjs.org/assets/images/logo.png',
   },
   {
     skill:'BOOTSTRAP',
@@ -46,6 +62,14 @@ const skills = [
   {
     skill:'MYSQL',
     img:'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg',
+  },
+  {
+    skill:'MONGODB',
+    img:'https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg',
+  },
+  {
+    skill:'SLACK',
+    img:'https://raw.githubusercontent.com/devicons/devicon/master/icons/slack/slack-original.svg',
   },
 ];
 
