@@ -44,6 +44,15 @@ const projects = [
     code: 'https://github.com/heitortessaro/blogs-api',
     type: "Back-End",
   },  
+  {
+    project:'Trybe Futebol Club',
+    img:'tfc.png',
+    description: 'It is a Rest API to manage the data of a football championship. Created using TypeScript, OOP and SOLID principes.',
+    secBtnType: 'Docs Postman',
+    secLink: 'https://documenter.getpostman.com/view/21397186/VUr1GCc1',
+    code: 'https://github.com/heitortessaro/trybe-futebol-clube',
+    type: "Back-End",
+  },  
 ];
 
 export default projects;
