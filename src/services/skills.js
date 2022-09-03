@@ -37,7 +37,7 @@ const skills = [
   },
   {
     skill:'CHAI',
-    img:'https://cdn.icon-icons.com/icons2/2699/PNG/512/chaijs_logo_icon_168435.png',
+    img:'https://camo.githubusercontent.com/7ecbd4531436e4f20c1dba52a4fd4ac367cfcc20a2f62cfe7a10f32da306afc6/687474703a2f2f636861696a732e636f6d2f696d672f636861692d6c6f676f2e706e67',
   },
   {
     skill:'SINON',
