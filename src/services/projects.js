@@ -52,7 +52,25 @@ const projects = [
     secLink: 'https://documenter.getpostman.com/view/21397186/VUr1GCc1',
     code: 'https://github.com/heitortessaro/trybe-futebol-clube',
     type: "Back-End",
-  },  
+  },
+  {
+    project:'Integrado ',
+    img:'integrado.jpg',
+    description: 'Provides a CRUD for managing universities informations from south american countries. It also implements a script to seed the database.',
+    secBtnType: 'Docs Postman',
+    secLink: 'https://documenter.getpostman.com/view/21397186/2s7ZEBnMex',
+    code: 'https://github.com/heitortessaro/Integrado',
+    type: "Back-End",
+  }, 
+  {
+    project:'Proagro ',
+    img:'proagro.jpg',
+    description: 'Provides a page to register and access information related to the Agricultural Activity Assurance Program - Proagro.',
+    secBtnType: 'Demo',
+    secLink: 'http://proagro-facil-heitor.surge.sh/',
+    code: 'https://github.com/heitortessaro/proagro-facil',
+    type: "Full-Stack",
+  },    
 ];
 
 export default projects;
