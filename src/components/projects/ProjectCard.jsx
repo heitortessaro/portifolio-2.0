@@ -3,7 +3,6 @@ import * as images from '../../images/index';
 
 export default function ProjectCard({ project, img, secBtnType, secLink, code, description, type }) {
   const image = images[img];
-  console.log(img)
   return (
     <div
       style={{ backgroundImage: `url('${image}')` }}

@@ -1,13 +1,14 @@
 import React from "react";
+import * as images from '../../images/index';
 
 export default function ProjectCardSmall({ project, img, secBtnType, secLink, code, description, type }) {
-  console.log(img);
+  const image = images[img];
   return (
     <div
       className="shadow-lg shadow-[rgb(0,0,0)] rounded-md mb-6 w-5/6 mx-auto"
     >
       <div>
-        <img className="rounded-t-lg" src={`../../images/${img}`} alt={project}/>
+        <img className="rounded-t-lg" src={image} alt={project}/>
       </div>
       <div className="mx-auto p-4">
         <span className="text-2xl font-bold text-white tracking-wider">
@@ -21,11 +22,13 @@ export default function ProjectCardSmall({ project, img, secBtnType, secLink, co
           {description}
         </span>
         <div className="pt-4 text-center">
-          <a href={secLink}>
-            <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-              {secBtnType}
-            </button>
-          </a>
+          {secBtnType && (
+            <a href={secLink}>
+              <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
+                {secBtnType}
+              </button>
+            </a>
+          )}
           <a href={code}>
             <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
               Code
