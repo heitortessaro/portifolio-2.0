@@ -22,11 +22,13 @@ export default function ProjectCard({ project, img, secBtnType, secLink, code, d
           {description}
         </span>
         <div className="pt-8 text-center">
-          <a href={secLink}>
-            <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-              {secBtnType}
-            </button>
-          </a>
+          {secBtnType && (
+            <a href={secLink}>
+              <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
+                {secBtnType}
+              </button>
+            </a>
+          )}
           <a href={code}>
             <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
               Code
