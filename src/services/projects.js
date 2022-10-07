@@ -1,5 +1,14 @@
 const projects = [
   {
+    project:'Trybe Futebol Club',
+    img:'tfc.png',
+    description: 'It is a Rest API to manage the data of a football championship. Created using TypeScript, OOP and SOLID principes.',
+    secBtnType: 'Demo',
+    secLink: 'http://trybe-futebol-clube.surge.sh/',
+    code: 'https://github.com/heitortessaro/trybe-futebol-clube',
+    type: "Back-End",
+  },
+  {
     project:'Integrado ',
     img:'integrado.jpg',
     description: 'Provides a CRUD for managing universities informations from south american countries. It also implements a script to seed the database.',
@@ -62,15 +71,6 @@ const projects = [
     code: 'https://github.com/heitortessaro/blogs-api',
     type: "Back-End",
   },  
-  {
-    project:'Trybe Futebol Club',
-    img:'tfc.png',
-    description: 'It is a Rest API to manage the data of a football championship. Created using TypeScript, OOP and SOLID principes.',
-    secBtnType: 'Demo',
-    secLink: 'http://trybe-futebol-clube.surge.sh/',
-    code: 'https://github.com/heitortessaro/trybe-futebol-clube',
-    type: "Back-End",
-  },
   {
     project:'Car Shop',
     img:'carShop.jpg',
